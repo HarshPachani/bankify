@@ -1,0 +1,33 @@
+First, I've changed tailwind.config.ts file to have custom colors and values
+then created a folder constants where there is a file index.ts which is used for navigation bar, and demo user for helping frontend creation.
+Then Created types folder and inside index.d.ts declared all the types
+changed public folder and added .svg icons.
+There is one more folder named lib which has utils.ts file, it has all the helper functions.
+inside app folder, i've changed globals.css for some custom CSS.
+and layout.tsx folder, i've changed inter variable in which i've added one more field name: variable and gave value of '--font-inter'
+
+=====================================================================================================================================
+FOLDER STRUCTURE.
+inside app folder, 
+    Create group folder(So it will not get included inside next.js route)
+    - /app/(root)/page.tsx and layout.tsx
+    We'll have sidebar inside that layout.tsx file.
+    - Now create another group route named (auth)
+    - /app/(auth)/layout.tsx, which will not have sidebar
+
+After creating sign-in and sign-up form, we'll have to create an API which will handle the form using appwrite
+We are using the concept like server actions.
+    - It is the concept known as Server actions and Mutations.
+        - Server Actions are asynchronous functions that are executed on the server. They can be used in Server and Client components to handle form submissions and data mutations in Next.js applications.
+        
+for that create a folder inside lib directive /lib/actions/user.actions.ts
+in appwrite we use actions to do so the signin and the functionalities, so all the code related to appwrite is in lib directory.
+
+PLAID
+-> The next player is Plaid, which is a middle-man between our application and banks.
+-> We've registered in Plaid and got some keys, now those keys are stored in .env file.
+-> Install some packages for plaid => npm install react-plaid-link and npm i plaid
+-> For using Plaid, Create file name plaid.ts inside lib directory: lib/plaid.ts
+
+DWOLLA
+-> Dwolla is a processor for processing the payments, across the banks.
